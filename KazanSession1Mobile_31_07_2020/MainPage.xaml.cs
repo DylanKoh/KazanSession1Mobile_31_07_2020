@@ -17,5 +17,15 @@ namespace KazanSession1Mobile_31_07_2020
         {
             InitializeComponent();
         }
+
+        private void pDepartment_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pAssetGroup_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

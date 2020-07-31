@@ -6,11 +6,13 @@
              mc:Ignorable="d"
              x:Class="KazanSession1Mobile_31_07_2020.MainPage">
 
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+    <StackLayout Padding="10">
+        <Grid Padding="5">
+            <Picker x:Name="pDepartment" Title="Department" SelectedIndexChanged="pDepartment_SelectedIndexChanged"/>
+            <Picker x:Name="pAssetGroup" Title="Asset Group" SelectedIndexChanged="pAssetGroup_SelectedIndexChanged" Grid.Column="1"/>
+        </Grid>
+        
+        
     </StackLayout>
 
 </ContentPage>
