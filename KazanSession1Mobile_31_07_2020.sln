@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30309.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KazanSession1Mobile_31_07_2020.Android", "KazanSession1Mobile_31_07_2020.Android\KazanSession1Mobile_31_07_2020.Android.csproj", "{09A20980-CDD5-426E-8CE1-BDEAD0702AF0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KazanSession1Mobile_31_07_2020", "KazanSession1Mobile_31_07_2020\KazanSession1Mobile_31_07_2020.csproj", "{ED0747B3-E3FF-4FA8-96FF-79FD028F9702}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{09A20980-CDD5-426E-8CE1-BDEAD0702AF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09A20980-CDD5-426E-8CE1-BDEAD0702AF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09A20980-CDD5-426E-8CE1-BDEAD0702AF0}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{09A20980-CDD5-426E-8CE1-BDEAD0702AF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09A20980-CDD5-426E-8CE1-BDEAD0702AF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09A20980-CDD5-426E-8CE1-BDEAD0702AF0}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{ED0747B3-E3FF-4FA8-96FF-79FD028F9702}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED0747B3-E3FF-4FA8-96FF-79FD028F9702}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED0747B3-E3FF-4FA8-96FF-79FD028F9702}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{ED0747B3-E3FF-4FA8-96FF-79FD028F9702}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED0747B3-E3FF-4FA8-96FF-79FD028F9702}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED0747B3-E3FF-4FA8-96FF-79FD028F9702}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1A05AFED-E215-4764-AE1F-A3A8E5FC0E60}
+	EndGlobalSection
+EndGlobal
