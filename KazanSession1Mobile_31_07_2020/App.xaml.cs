@@ -10,7 +10,7 @@ namespace KazanSession1Mobile_31_07_2020
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new MainPage());
         }
 
         protected override void OnStart()

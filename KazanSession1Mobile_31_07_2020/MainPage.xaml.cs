@@ -66,7 +66,7 @@ namespace KazanSession1Mobile_31_07_2020
 
         private void FilterContent()
         {
-            if ((pDepartment.SelectedItem == null && pAssetGroup.SelectedItem == null) || (pDepartment.SelectedItem.ToString() == "No Filter" && pAssetGroup.SelectedItem.ToString() == "No Filter"))
+            if ((pDepartment.SelectedItem == null || pDepartment.SelectedItem.ToString() == "No Filter") && (pAssetGroup.SelectedItem == null || pAssetGroup.SelectedItem.ToString() == "No Filter"))
             {
                 if (string.IsNullOrWhiteSpace(sbSearch.Text))
                 {
@@ -169,17 +169,17 @@ namespace KazanSession1Mobile_31_07_2020
             FilterContent();
         }
 
-        private void btnEdit_Clicked(object sender, EventArgs e)
+        private async void btnEdit_Clicked(object sender, EventArgs e)
         {
             var trigger = (ImageButton)sender;
             var getParentLayout = (StackLayout)trigger.Parent;
             var getMainParent = (Grid)getParentLayout.Parent;
             var getChildLayout = (StackLayout)getMainParent.Children[0];
             var getAssetID = Int32.Parse(((Label)getChildLayout.Children[0]).Text);
-
+            await Navigation.PushAsync(new RegisteringAndEditingAsset(getAssetID));
         }
 
-        private void btnMove_Clicked(object sender, EventArgs e)
+        private async void btnMove_Clicked(object sender, EventArgs e)
         {
             var trigger = (ImageButton)sender;
             var getParentLayout = (StackLayout)trigger.Parent;
@@ -188,7 +188,7 @@ namespace KazanSession1Mobile_31_07_2020
             var getAssetID = Int32.Parse(((Label)getChildLayout.Children[0]).Text);
         }
 
-        private void btnHistory_Clicked(object sender, EventArgs e)
+        private async void btnHistory_Clicked(object sender, EventArgs e)
         {
             var trigger = (ImageButton)sender;
             var getParentLayout = (StackLayout)trigger.Parent;
@@ -200,6 +200,11 @@ namespace KazanSession1Mobile_31_07_2020
         private void sbSearch_TextChanged(object sender, TextChangedEventArgs e)
         {
             FilterContent();
+        }
+
+        private async void btnAdd_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new RegisteringAndEditingAsset(0));
         }
     }
 }

@@ -40,7 +40,8 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        
+        <Button x:Name="btnAdd" Text="Add" Clicked="btnAdd_Clicked"/>
+
     </StackLayout>
 
 </ContentPage>

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="KazanSession1Mobile_31_07_2020.RegisteringAndEditingAsset"
+             Title="Asset Information">
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+            <Label Text="Asset Name: "/>
+            <Entry x:Name="entryAsset" Placeholder="Asset Name"/>
+            <Grid Padding="5">
+                <Picker x:Name="pDepartment" Title="Department" SelectedIndexChanged="pDepartment_SelectedIndexChanged"/>
+                <Picker x:Name="pLocation" Title="Location" Grid.Column="1"/>
+                <Picker x:Name="pAssetGroup" Title="Asset Group" Grid.Row="1" SelectedIndexChanged="pAssetGroup_SelectedIndexChanged"/>
+                <Picker x:Name="pAccountable" Title="Accountable Party" Grid.Row="1" Grid.Column="1"/>
+            </Grid>
+            <Editor x:Name="editorDescription" Placeholder="Asset Description"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
