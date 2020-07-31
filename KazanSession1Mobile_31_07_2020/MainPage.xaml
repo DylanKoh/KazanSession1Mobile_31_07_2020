@@ -8,17 +8,17 @@
 
     <StackLayout Padding="10">
         <Grid Padding="5">
-            <Picker x:Name="pDepartment" Title="Department" SelectedIndexChanged="pDepartment_SelectedIndexChanged" HeightRequest="60" FontSize="Small"/>
+            <Picker x:Name="pDepartment" Title="Department" SelectedIndexChanged="pDepartment_SelectedIndexChanged" HeightRequest="75" FontSize="Small"/>
             <Picker x:Name="pAssetGroup" Title="Asset Group" SelectedIndexChanged="pAssetGroup_SelectedIndexChanged" Grid.Column="1" FontSize="Small"/>
         </Grid>
         <Label Text="Warranty Date Range:"/>
         <Grid Padding="5">
             <Label Text="Start Date: "/>
             <Label Text="End Date: " Grid.Column="1"/>
-            <DatePicker x:Name="dpStart" DateSelected="dpStart_DateSelected" Grid.Row="1" HeightRequest="60" FontSize="Small"/>
+            <DatePicker x:Name="dpStart" DateSelected="dpStart_DateSelected" Grid.Row="1" HeightRequest="75" FontSize="Small"/>
             <DatePicker x:Name="dpEnd" DateSelected="dpEnd_DateSelected" Grid.Row="1" Grid.Column="1" FontSize="Small"/>
         </Grid>
-        <SearchBar x:Name="sbSearch" TextChanged="sbSearch_TextChanged"/>
+        <SearchBar x:Name="sbSearch" TextChanged="sbSearch_TextChanged" FontSize="Small"/>
         <ListView x:Name="lvAssets" HasUnevenRows="True">
             <ListView.ItemTemplate>
                 <DataTemplate>
@@ -40,7 +40,7 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        <Button x:Name="btnAdd" Text="Add" Clicked="btnAdd_Clicked"/>
+        <Button x:Name="btnAdd" Text="Add" Clicked="btnAdd_Clicked" FontSize="Small"/>
 
     </StackLayout>
 

@@ -12,11 +12,21 @@
             <Entry x:Name="entryAsset" Placeholder="Asset Name"/>
             <Grid Padding="5">
                 <Picker x:Name="pDepartment" Title="Department" SelectedIndexChanged="pDepartment_SelectedIndexChanged"/>
-                <Picker x:Name="pLocation" Title="Location" Grid.Column="1"/>
+                <Picker x:Name="pLocation" Title="Location" Grid.Column="1" IsEnabled="False"/>
                 <Picker x:Name="pAssetGroup" Title="Asset Group" Grid.Row="1" SelectedIndexChanged="pAssetGroup_SelectedIndexChanged"/>
                 <Picker x:Name="pAccountable" Title="Accountable Party" Grid.Row="1" Grid.Column="1"/>
             </Grid>
             <Editor x:Name="editorDescription" Placeholder="Asset Description"/>
+            <Entry x:Name="dpWarranty" Placeholder="Expired Warranty" Focused="dpWarranty_Focused"/>
+            <DatePicker x:Name="dpSelection" IsVisible="false"/>
+            <Grid Padding="5">
+                <Label Text="Asset SN: "/>
+                <Label Text="" x:Name="lblAssetSN" Grid.Column="1"/>
+            </Grid>
+            <Grid Padding="5">
+                <Button Text="Submit" x:Name="btnSubmit" Clicked="btnSubmit_Clicked"/>
+                <Button Text="Cancel" x:Name="btnCancel" Clicked="btnCancel_Clicked" Grid.Column="1"/>
+            </Grid>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
