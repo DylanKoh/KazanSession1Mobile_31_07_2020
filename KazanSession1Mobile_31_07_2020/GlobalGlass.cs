@@ -16,5 +16,16 @@ namespace KazanSession1Mobile_31_07_2020
             public string Department { get; set; }
         }
 
+        public class Department
+        {
+            public long ID { get; set; }
+            public string Name { get; set; }
+        }
+
+        public partial class AssetGroup
+        {
+            public long ID { get; set; }
+            public string Name { get; set; }
+        }
     }
 }

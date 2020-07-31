@@ -8,10 +8,38 @@
 
     <StackLayout Padding="10">
         <Grid Padding="5">
-            <Picker x:Name="pDepartment" Title="Department" SelectedIndexChanged="pDepartment_SelectedIndexChanged"/>
-            <Picker x:Name="pAssetGroup" Title="Asset Group" SelectedIndexChanged="pAssetGroup_SelectedIndexChanged" Grid.Column="1"/>
+            <Picker x:Name="pDepartment" Title="Department" SelectedIndexChanged="pDepartment_SelectedIndexChanged" HeightRequest="60" FontSize="Small"/>
+            <Picker x:Name="pAssetGroup" Title="Asset Group" SelectedIndexChanged="pAssetGroup_SelectedIndexChanged" Grid.Column="1" FontSize="Small"/>
         </Grid>
-        
+        <Label Text="Warranty Date Range:"/>
+        <Grid Padding="5">
+            <Label Text="Start Date: "/>
+            <Label Text="End Date: " Grid.Column="1"/>
+            <DatePicker x:Name="dpStart" DateSelected="dpStart_DateSelected" Grid.Row="1" HeightRequest="60" FontSize="Small"/>
+            <DatePicker x:Name="dpEnd" DateSelected="dpEnd_DateSelected" Grid.Row="1" Grid.Column="1" FontSize="Small"/>
+        </Grid>
+        <SearchBar x:Name="sbSearch" TextChanged="sbSearch_TextChanged"/>
+        <ListView x:Name="lvAssets" HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid Padding="5">
+                            <StackLayout Orientation="Vertical">
+                                <Label Text="{Binding AssetID}" IsVisible="False"/>
+                                <Label Text="{Binding AssetName}"/>
+                                <Label Text="{Binding Department}"/>
+                                <Label Text="{Binding AssetSN}"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal" Grid.Column="1">
+                                <ImageButton Source="EditBtn.jpg" x:Name="btnEdit" Clicked="btnEdit_Clicked" Aspect="AspectFit"/>
+                                <ImageButton Source="MoveBtn.jpg" x:Name="btnMove" Clicked="btnMove_Clicked" Aspect="AspectFit"/>
+                                <ImageButton Source="HistoryBtn.jpg" x:Name="btnHistory" Clicked="btnHistory_Clicked" Aspect="AspectFit"/>
+                            </StackLayout>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
         
     </StackLayout>
 
